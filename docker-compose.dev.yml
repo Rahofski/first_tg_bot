@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: news_feed_bot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Barbosikpesik7
+      PGDATA: /var/lib/postgresql/data/
+    ports:
+      - "1919:5432"
+    volumes:
+      - db:/var/lib/postgresql/data/
+volumes:
+  db:

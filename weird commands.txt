@@ -1,0 +1,6 @@
+docker-compose -f docker-compose.dev.yml up
+
+
+docker exec -it tg_bot-db-1 psql -U postgres -d postgres
+
+goose postgres "host=localhost port=1919 user=postgres database=news_feed_bot password=Barbosikpesik7 sslmode=disable" status
